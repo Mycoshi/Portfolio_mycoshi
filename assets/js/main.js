@@ -8,9 +8,30 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SERVICES MODAL ===============*/
+const modalViews = document.querySelectorAll('.services_modal'),
+    modalButtons = document.querySelectorAll('.services_button'),
+    modalClose = document.querySelectorAll('.services_modal-close')
 
+let modal = function(modalClick) {
+    modalViews[modalClick].classList.add('active-modal')
 
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
+}
+
+modalButtons.forEach((mb, i) => {
+    mb.addEventListener('click', () => {
+        modal(i)
+    })
+})
+
+modalClose.forEach((mc) => {
+        mc.addEventListener('click', () => {
+            modalViews.forEach((mv) => {
+                mv.classList.remove('active-modal')
+
+            })
+        })
+    })
+    /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 
 
 /* Link active work */

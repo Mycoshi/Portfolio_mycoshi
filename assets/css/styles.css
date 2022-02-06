@@ -429,7 +429,7 @@ img {
 .skills_content {
     background-color: var(--container-color);
     padding: 1.5rem;
-    border-radius: 1.125rem;
+    border-radius: 1.25rem;
 }
 
 .skills_title {
@@ -440,24 +440,25 @@ img {
     margin-bottom: 1.5rem;
 }
 
-
-/*no grid? */
-
 .skills_box {
-    display: grid;
-    justify-content: flex;
+    display: flex;
+    column-gap: 2.5rem;
+    justify-content: center;
     column-gap: 2.5rem;
 }
 
 .skills_group {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     align-content: flex-start;
-    row-gap: 1rem;
+    row-gap: .5rem;
+    column-gap: 10rem;
 }
 
 .skills_data {
     display: flex;
     column-gap: .5rem;
+    row-gap: 1rem;
 }
 
 .skills .bx-badge-check {
@@ -478,14 +479,173 @@ img {
 
 /*=============== SERVICES ===============*/
 
+.services_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding-top: 1rem;
+}
+
+.services_card {
+    background-color: var(--container-color);
+    padding: 3rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+}
+
+.services_title {
+    font-size: var(--h3-font-size);
+    margin-bottom: 2.5rem;
+}
+
+.services_button {
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+}
+
+.services_button:hover .services_icon {
+    transform: translateX(.25rem);
+    transition: .3s;
+}
+
 
 /* Services modal */
+
+.services_modal {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(var(--second-hue), 28%, 16%, .7);
+    padding: 2rem 1rem;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+    z-index: var(--z-modal);
+}
+
+.services_modal-content {
+    position: relative;
+    background-color: var(--body-color);
+    padding: 4.5rem 1.5rem 2.5rem;
+    border-radius: 1.5rem;
+}
+
+.services_modal-title,
+.services_modal-description {
+    text-align: center;
+}
+
+.services_modal-title {
+    font-size: var(--h3-font-size);
+    color: var(--first-color);
+    margin-bottom: 1rem;
+}
+
+.services_modal-description {
+    font-size: var(--small-font-size);
+    margin-bottom: 2rem;
+}
+
+.services_modal-list {
+    display: grid;
+    row-gap: .75rem;
+}
+
+.services_modal-item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: .5rem;
+}
+
+.services_modal-icon {
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.services_modal-info {
+    font-size: var(--small-font-size);
+}
+
+.services_modal-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
 
 
 /*Active modal*/
 
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /*=============== WORK ===============*/
+
+.work_container {
+    padding-top: 1rem;
+}
+
+.work_filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 2rem;
+}
+
+.work_item {
+    cursor: poiner;
+    color: var(--first-color);
+    padding: .25rem .75rem;
+    font-weight: var(--font-medium);
+    border-radius: .5rem;
+}
+
+.work_card {
+    background-color: var(--container-color);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.work_img {
+    border-radius: 1rem;
+    margin-bottom: .75rem;
+}
+
+.work_title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    margin-bottom: .25rem;
+}
+
+.work_button {
+    width: max-content;
+    color: var(--first-color);
+    font-size: var(--small-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: 0.25rem;
+}
+
+.work_button:hover .work_icon {
+    transform: translateX(.25rem);
+}
+
+.work_icon {
+    font-size: 1rem;
+}
+
+.active-work {
+    background-color: var(--first-color);
+    color: var(--body-color);
+}
 
 
 /* Active item work*/
