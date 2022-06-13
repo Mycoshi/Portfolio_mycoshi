@@ -341,6 +341,7 @@
     }
     
     .home_buttons {
+        padding:2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -493,8 +494,8 @@
     .skills_box {
         display: flex;
         justify-content: center;
-        column-gap: 2.5rem;
-        padding-top: 2rem;
+        column-gap: 2rem;
+        padding: 2rem;
     }
     
     .skills_group {
@@ -697,6 +698,7 @@
     .contact_container {
         row-gap: 3rem;
         padding-bottom: 3rem;
+        width:100%;
     }
     
     .contact_title {
@@ -708,13 +710,13 @@
     .contact_info {
         display: grid;
         gap: 1rem;
-    }
-    
+    } 
     .contact_card {
         background-color: var(--container-color);
         padding: 1rem;
         border-radius: .75rem;
         text-align: center;
+        width:320px;
     }
     
     .contact_card-icon {
@@ -751,8 +753,9 @@
     }
     
     .contact_button-icon {
-        font-size: 1rem;
+        font-size: 2rem;
         transition: .4s;
+        
     }
     
     .contact_form-div {
@@ -955,7 +958,6 @@
         .contact_container {
             grid-template-columns: repeat(2, max-content);
             justify-content: center;
-            column-gap: 3rem;
         }
     }
     /* For large devices */
@@ -1044,8 +1046,5 @@
         }
         .work_title {
             margin-bottom: .5rem;
-        }
-        .contact_container {
-            column-gap: 6rem;
         }
     }
