@@ -479,7 +479,7 @@
     
     .skills_content {
         background-color: var(--container-color);
-        padding: 1.5rem;
+        padding: 2rem;
         border-radius: 1.25rem;
     }
     
@@ -503,13 +503,13 @@
         grid-template-columns: 1fr 1fr;
         align-content: flex-start;
         row-gap: 2rem;
-        column-gap: 10rem;
+        column-gap: 5rem;
     }
     
     .skills_data {
         display: flex;
         column-gap: .5rem;
-        row-gap: 1rem;
+        row-gap: 0rem;
     }
     
     .skills .bx-badge-check {
@@ -536,7 +536,6 @@
     
     .services_card {
         background-color: var(--container-color);
-        padding: 3rem 1.5rem 1.5rem;
         border-radius: 1rem;
     }
     
@@ -708,7 +707,7 @@
     }
     
     .contact_info {
-        display: grid;
+        display: flex;
         gap: 1rem;
     } 
     .contact_card {
